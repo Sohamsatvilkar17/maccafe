@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { X, Calendar, Clock, Users, MapPin, CheckCircle, Sparkles, Coffee } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { CAFE_INFO } from "@/data/cafeData";
 
 export default function ReservationModal() {
   const { isReservationOpen, setIsReservationOpen } = useCart();
@@ -101,7 +102,7 @@ export default function ReservationModal() {
               </div>
               <div className="flex justify-between">
                 <span className="text-stone-500">Location:</span>
-                <span className="font-medium text-stone-900">428 Elmwood Grove</span>
+                <span className="font-medium text-stone-900">{CAFE_INFO.address}, SoHo</span>
               </div>
             </div>
 
@@ -203,13 +204,13 @@ export default function ReservationModal() {
                     onChange={(e) => setTime(e.target.value)}
                     className="w-full px-3 py-2 text-sm bg-stone-50 border border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-700/20 focus:border-amber-800"
                   >
-                    <option value="7:30 AM">7:30 AM (Dawn Pour)</option>
-                    <option value="8:30 AM">8:30 AM</option>
-                    <option value="10:00 AM">10:00 AM (Brunch Rush)</option>
-                    <option value="11:30 AM">11:30 AM</option>
-                    <option value="1:00 PM">1:00 PM</option>
-                    <option value="2:30 PM">2:30 PM (Afternoon Brew)</option>
-                    <option value="4:00 PM">4:00 PM (Quiet Hour)</option>
+                    <option value="10:00 AM">10:00 AM (Warm Bakes Opening)</option>
+                    <option value="11:30 AM">11:30 AM (Brunch & Espresso)</option>
+                    <option value="1:00 PM">1:00 PM (Lunch Break)</option>
+                    <option value="2:30 PM">2:30 PM (Afternoon Focus)</option>
+                    <option value="4:00 PM">4:00 PM (Coffee & Pastry Break)</option>
+                    <option value="5:30 PM">5:30 PM (Early Evening)</option>
+                    <option value="7:00 PM">7:00 PM (Evening Unwind)</option>
                   </select>
                 </div>
               </div>

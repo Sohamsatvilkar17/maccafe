@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, CheckCircle2, Clock } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { CAFE_INFO } from "@/data/cafeData";
 
 export default function CartDrawer() {
   const {
@@ -100,7 +101,7 @@ export default function CartDrawer() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-stone-500">Pick-Up Counter:</span>
-                    <span>The Daily Brew, 428 Elmwood Grove</span>
+                    <span className="font-medium text-stone-900">{CAFE_INFO.name}, {CAFE_INFO.address}</span>
                   </div>
                 </div>
 

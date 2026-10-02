@@ -16,21 +16,21 @@ export default function BeanFinder() {
   const recommendation = React.useMemo(() => {
     if (flavorPreference === "fruity") {
       return {
-        roast: COFFEE_ROASTS[0], // Lumina Dawn
-        suggestedDrink: MENU_ITEMS[1], // Ethiopia Guji Pour-Over
-        pairingTip: "Best brewed cleanly through paper filter or as an iced pour-over with no dairy to preserve high-elevation florals.",
+        roast: COFFEE_ROASTS[1], // Solar Flora (Light)
+        suggestedDrink: MENU_ITEMS[6], // Ethiopian Yirgacheffe V60 Pour-Over
+        pairingTip: "Best brewed cleanly through paper filter or as an iced pour-over with no dairy to preserve delicate peach florals.",
       };
     } else if (flavorPreference === "bold") {
       return {
-        roast: COFFEE_ROASTS[2], // Velvet Obsidian
-        suggestedDrink: MENU_ITEMS[0], // Golden Cardamom Cortado
-        pairingTip: "Pairs miraculously with steamed oat or whole milk, unlocking rich fudge, cedar, and molasses undertones.",
+        roast: COFFEE_ROASTS[2], // Midnight Hearth (Dark)
+        suggestedDrink: MENU_ITEMS[1], // Slow-Steeped Cold Brew
+        pairingTip: "Pairs miraculously over ice or with steamed oat milk, unlocking rich fudge, cedar, and molasses undertones.",
       };
     } else {
       return {
-        roast: COFFEE_ROASTS[1], // Terra Madre
-        suggestedDrink: MENU_ITEMS[2], // Smoked Sea Salt Caramel Latte
-        pairingTip: "The gold standard for daily balance: sweet honeyed acidity with toasted almond and chocolate pastry finish.",
+        roast: COFFEE_ROASTS[0], // Maccafe House Blend (Medium)
+        suggestedDrink: MENU_ITEMS[0], // Classic Cappuccino
+        pairingTip: "The gold standard for daily balance: bittersweet chocolate and toasted hazelnut paired with fresh sourdough.",
       };
     }
   }, [flavorPreference, brewStyle]);

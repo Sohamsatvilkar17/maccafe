@@ -20,18 +20,18 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Simple calculation of open status (assumes normal day daytime)
+  // Calculation of open status for 10 AM – 8 PM daily
   useEffect(() => {
     const now = new Date();
     const hour = now.getHours();
-    setIsOpenNow(hour >= 7 && hour < 18);
+    setIsOpenNow(hour >= 10 && hour < 20);
   }, []);
 
   const navLinks = [
     { label: "Our Story", href: "#story" },
     { label: "Menu", href: "#menu" },
-    { label: "Roastery", href: "#roastery" },
-    { label: "Flavor Finder", href: "#bean-finder" },
+    { label: "Espresso Bar", href: "#roastery" },
+    { label: "Flavor Match", href: "#bean-finder" },
     { label: "Reviews", href: "#reviews" },
     { label: "Hours & Visit", href: "#location" },
   ];
@@ -55,7 +55,7 @@ export default function Navbar() {
               ></span>
             </span>
             <span className="text-amber-200">
-              {isOpenNow ? "Open Today till 6:00 PM" : "Closed Now • Opens 6:30 AM Tomorrow"}
+              {isOpenNow ? "Open Today: 10:00 AM – 8:00 PM" : "Closed Now • Opens at 10:00 AM Daily"}
             </span>
             <span className="text-stone-400 hidden md:inline">•</span>
             <span className="text-stone-300 hidden md:inline">{CAFE_INFO.announcement}</span>
@@ -64,7 +64,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 text-stone-300">
             <span className="hidden sm:flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-amber-300" />
-              <span>Artisan Quarter, Portland</span>
+              <span>SoHo, New York</span>
             </span>
             <span className="hidden sm:inline text-stone-500">•</span>
             <a
@@ -93,10 +93,10 @@ export default function Navbar() {
             </div>
             <div>
               <span className="block font-serif text-2xl font-bold tracking-tight text-[#24130A] leading-tight">
-                The Daily Brew
+                Maccafe
               </span>
               <span className="block text-[11px] font-medium uppercase tracking-wider text-amber-900/70">
-                Artisan Roastery & Bakehouse
+                Artisan Espresso & Sourdough
               </span>
             </div>
           </Link>

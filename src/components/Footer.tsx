@@ -23,13 +23,13 @@ export default function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-2">
               <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
-                The Morning Dispatch
+                The SoHo Dispatch
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-                Join The Daily Brew Coffee Club
+                Join The Maccafe Espresso & Bread Club
               </h3>
               <p className="text-stone-300 text-xs sm:text-sm max-w-xl">
-                Receive 10% off your first whole-bean bag, home brewing recipes from our head barista, and invitations to our monthly cupping tastings.
+                Receive 10% off your first whole-bean bag or bakery order, home espresso extraction guides, and first access to weekend sourdough specials.
               </p>
             </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
               {subscribed ? (
                 <div className="bg-emerald-950/60 border border-emerald-700/60 p-4 rounded-2xl flex items-center gap-3 text-emerald-300 text-sm">
                   <Check className="w-5 h-5 shrink-0" />
-                  <span>Welcome to the club! Check your inbox for your 10% discount code.</span>
+                  <span>Welcome to the club! Check your inbox for your 10% welcome code.</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
@@ -71,11 +71,11 @@ export default function Footer() {
                 <Coffee className="w-5 h-5" />
               </div>
               <span className="font-serif text-2xl font-bold text-white">
-                The Daily Brew
+                {CAFE_INFO.name}
               </span>
             </div>
             <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Artisan neighborhood coffee roastery and sourdough bakery established in 2018. Honoring the craft from seed to cup.
+              {CAFE_INFO.tagline}. Handcrafted on Mercer Street since 2021.
             </p>
             <div className="flex items-center gap-3 text-amber-300 pt-2">
               <a
@@ -94,7 +94,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#2D1B10] flex items-center justify-center hover:bg-amber-500 hover:text-stone-950 transition-colors"
-                aria-label="Cafe Spotify Playlist"
+                aria-label="Maccafe Ambient Spotify Playlist"
               >
                 <Music className="w-4 h-4" />
               </a>
@@ -109,7 +109,12 @@ export default function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm text-stone-400">
               <li>
                 <a href="#menu" className="hover:text-amber-200 transition-colors">
-                  Daily Espresso & Pour-Overs
+                  Artisan Espresso & Pour-Overs
+                </a>
+              </li>
+              <li>
+                <a href="#menu" className="hover:text-amber-200 transition-colors">
+                  Sourdough Cinnamon Buns & Bakes
                 </a>
               </li>
               <li>
@@ -124,12 +129,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#story" className="hover:text-amber-200 transition-colors">
-                  Direct-Trade Roasting Ritual
-                </a>
-              </li>
-              <li>
-                <a href="#location" className="hover:text-amber-200 transition-colors">
-                  Hours & Seating Guidelines
+                  Our Sourdough & Espresso Story
                 </a>
               </li>
             </ul>
@@ -138,20 +138,17 @@ export default function Footer() {
           {/* Hours & Sanctuary */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-amber-300">
-              Sanctuary Hours
+              Cafe Hours
             </h4>
             <div className="space-y-1.5 text-xs text-stone-400">
-              <p>
-                <strong className="text-stone-200">Mon – Fri:</strong> 6:30 AM – 6:00 PM
+              <p className="text-amber-200 font-semibold text-sm">
+                10:00 AM – 8:00 PM Daily
               </p>
-              <p>
-                <strong className="text-stone-200">Saturday:</strong> 7:00 AM – 7:00 PM
+              <p className="text-stone-300">
+                Open Monday through Sunday
               </p>
-              <p>
-                <strong className="text-stone-200">Sunday:</strong> 7:30 AM – 5:00 PM
-              </p>
-              <p className="pt-2 text-amber-200/80 font-medium">
-                Fresh morning bakes emerge daily at 7:00 AM.
+              <p className="pt-2 text-stone-400">
+                Sourdough buns and bakes emerge warm at 10:00 AM.
               </p>
             </div>
           </div>
@@ -180,11 +177,11 @@ export default function Footer() {
 
         {/* Bottom Credits & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
-          <p>© {new Date().getFullYear()} The Daily Brew Coffee Roasters. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Maccafe. All rights reserved.</p>
           <div className="flex items-center gap-1 text-stone-400">
-            <span>Roasted and baked with</span>
+            <span>Crafted with</span>
             <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-            <span>for our neighborhood.</span>
+            <span>for our coffee & pastry lovers.</span>
           </div>
         </div>
       </div>

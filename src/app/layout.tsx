@@ -15,21 +15,23 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Daily Brew | Boutique Specialty Coffee & Artisan Bakery",
+  title: "Maccafe | Artisan Espresso & Fresh Sourdough Pastries",
   description:
-    "Experience handcrafted single-origin coffees, small-batch roasted beans, and warm organic pastries baked fresh every dawn at The Daily Brew.",
+    "Artisan espresso & fresh sourdough pastries in a cozy, modern space. Open 10 AM – 8 PM daily in SoHo.",
   keywords: [
-    "artisan coffee",
-    "specialty cafe",
-    "espresso bar",
-    "single origin roastery",
-    "fresh bakery",
-    "The Daily Brew",
+    "Maccafe",
+    "artisan espresso",
+    "sourdough pastries",
+    "cappuccino",
+    "cold brew",
+    "cinnamon bun",
+    "avocado toast",
+    "cozy modern cafe",
   ],
   openGraph: {
-    title: "The Daily Brew | Boutique Specialty Coffee & Artisan Bakery",
+    title: "Maccafe | Artisan Espresso & Fresh Sourdough Pastries",
     description:
-      "Handcrafted coffee, small-batch roasts, and organic morning pastries in a warm, sunlit neighborhood space.",
+      "Artisan espresso & fresh sourdough pastries in a cozy, modern space. Open 10 AM – 8 PM daily.",
     type: "website",
   },
 };

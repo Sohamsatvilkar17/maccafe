@@ -18,10 +18,10 @@ export default function MenuSection() {
     "all",
     "House Favorite",
     "Signature",
-    "Direct Trade",
-    "Organic",
+    "Baked Fresh Daily",
+    "Single Origin",
     "Vegan",
-    "Baked Fresh at 5 AM",
+    "18hr Steep",
   ];
 
   const filteredItems = useMemo(() => {
@@ -72,7 +72,7 @@ export default function MenuSection() {
             Our Handcrafted Menu
           </h2>
           <p className="text-stone-600 text-base sm:text-lg mt-3">
-            Every pour-over, cortado, and brioche is prepared to order using exceptional ingredients, pure spring water, and mindful craft.
+            From velvety cappuccinos and slow-steeped cold brew to warm sourdough cinnamon buns and heirloom avocado toast, everything is prepared fresh to order.
           </p>
         </div>
 

@@ -11,7 +11,7 @@ export default function ReviewsSection() {
   const [author, setAuthor] = useState("");
   const [role, setRole] = useState("");
   const [comment, setComment] = useState("");
-  const [favoriteItem, setFavoriteItem] = useState("Ethiopia Guji V60");
+  const [favoriteItem, setFavoriteItem] = useState("Classic Cappuccino & Sourdough Bun");
   const [success, setSuccess] = useState(false);
 
   const handleSubmitReview = (e: React.FormEvent) => {
@@ -89,7 +89,7 @@ export default function ReviewsSection() {
             ) : (
               <form onSubmit={handleSubmitReview} className="space-y-4 max-w-2xl mx-auto">
                 <h3 className="font-serif text-xl font-bold text-stone-900 text-center">
-                  Share Your Daily Brew Experience
+                  Share Your Maccafe Experience
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
